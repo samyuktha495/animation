@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border:1px solid black;
+            border-collapse: collapse;
+            padding:20px;
+        }
+        table{
+            width:100%;
+            text-align: center;
+        }
+        .one:hover{
+            animation-name:roll-right;
+            animation-delay:1s;
+            animation-duration:4s;
+            animation-direction:alternate;
+            animation-iteration-count:3;
+            animation-timing-function:ease;
+        }
+        @keyframes roll-right{
+            from{
+                transform: translateX(100px)rotate(0deg);
+            }
+            to{
+                transform:translateX(400px)rotate(360deg);
+            }
+        }
+        .two:hover{
+            animation-name:roll-left;
+            animation-delay: 1s;
+            animation-duration:4s;
+            animation-direction:alternate;
+            animation-iteration-count:3;
+            animation-timing-function:ease;
+        }
+        @keyframes roll-left{
+            from{
+                transform: translateX(100px)rotate(0deg);
+            }
+            to{
+                transform:translateX(-400px)rotate(-360deg);
+            }
+        }
+        .three:hover{
+            animation-name:move-vertical;
+            animation-duration:4s;
+            animation-delay: 1s;
+            animation-direction:alternate;
+            animation-iteration-count:3;
+            animation-timing-function:ease;
+        }
+        @keyframes move-vertical{
+            from{
+                transform: translateY(100px)rotate(0deg);
+            }
+            to{
+                transform:translateY(400px)rotate(360deg);
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <h2>Hover over the images to see rolling and rollback animations </h2>
+    <table>
+        <tr>
+            <td><h3>Image1</h3></td>
+            <td><img class="one" src="https://imgs.michaels.com/MAM/assets/1/5E3C12034D34434F8A9BAAFDDF0F8E1B/img/F45826C3425F43038C5EC59946BF824F/10406367_30.jpg"alt=""width="200px"height="200px"></td>
+        </tr>
+        <tr>
+            <td><h3>Image2</h3></td>
+            <td><img class="two" src="https://imgs.michaels.com/MAM/assets/1/5E3C12034D34434F8A9BAAFDDF0F8E1B/img/F45826C3425F43038C5EC59946BF824F/10406367_30.jpg"alt=""width="200px"height="200px"></td>
+        </tr>
+        <tr>
+            <td><h3>Image3</h3></td>
+            <td><img class="three" src="https://imgs.michaels.com/MAM/assets/1/5E3C12034D34434F8A9BAAFDDF0F8E1B/img/F45826C3425F43038C5EC59946BF824F/10406367_30.jpg"alt=""width="200px"height="200px"></td>
+        </tr>
+    </table>
+</body>
+</html>
